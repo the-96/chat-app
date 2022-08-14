@@ -9,6 +9,7 @@ app.controller('mainController', ['$scope', function ($scope) {
     socket.on('chat message', function (msg) {
         var li = document.createElement("li");
         li.appendChild(document.createTextNode(msg));
+        console.log(msg);
         document.getElementById("messages").appendChild(li);
     });
 }]);
